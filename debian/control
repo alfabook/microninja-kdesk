@@ -1,0 +1,30 @@
+Source: kdesk
+Maintainer: Microninja Team <info@scuolabook.it>
+Section: x11
+Priority: optional
+Standards-Version: 1.1.0
+Build-Depends: libx11-dev, libxft-dev, libimlib2-dev, libstartup-notification0-dev, libxss-dev, libraspberrypi-dev, debhelper (>=9.0.0), g++-4.7
+
+Package: kdesk
+Architecture: any
+Depends: libkdesk-dev (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, libstartup-notification0, libxss1
+Provides: idesk
+Conflicts: idesk
+Replaces: idesk
+Description: Microninja desktop icon manager
+ This package provides the Microninja graphical desktop facade.
+ It presents the microninja background along with all Microninja-Make icons organized
+ so you can follow all learning experience apps: Make Pong, Video
+ and surf the rest of system applications directly from the desktop
+
+Package: libkdesk-dev
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, libstartup-notification0, python
+Description: Microninja desktop hourglass developer library
+ This package contains the library, include file and sample source code
+ to provide your applications with an hourglass for desktop lengthy tasks.
+
+Package: kdesk-dbg
+Architecture: any
+Depends: libkdesk-dev (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, libstartup-notification0, libxss1
+Description: Microninja desktop icon manager (Debug version)
